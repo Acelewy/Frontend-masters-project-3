@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 2;
+    max-width: 100vw;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+    min-width: 60vw;
+    min-height: 70vh;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+    margin: auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid hsl(240, 5%, 91%);
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transform: rotate(0deg);
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button.rotate {
+    transform: rotate(180deg);
+}
+
+.image {
+    overflow: hidden;
+    align-self: stretch;
+}
+
+p {
+    padding-top: 19px;
+    max-width: 382px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.pic {
+    flex-basis: 50%;
+    padding: 20px;
+    background-image: url('bg-pattern-desktop.svg');
+    overflow: hidden;
+    background-size: 690px;
+    background-repeat: no-repeat;
+    background-position: right 75px top -120px;
+}
+
+.txt {
+    padding-right: 53px;
+    background-image: none !important;
+}
+
+.okayy {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    transform: translate(-21%, 8%);
+}
+
+.okay {
+    top: 50%;
+    position: absolute;
+    left: -105px;
+    top: 45%;
+    z-index: 100;
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        flex-direction: column;
+        max-width: 80vw;
+        margin: auto;
+        margin-top: 92px;
+        margin-left: 36px;
+    }
+    .pic {
+        background-image: url('bg-pattern-desktop.svg');
+        transform: translate(0%, -34%);
+        padding: 10px;
+        overflow: inherit;
+        background-position: center top 150%;
+        background-size: 80%;
+    }
+    .okay {
+        top: -9%;
+        left: 11%;
+        width: 31%;
+    }
+    .okayy {
+        transform: translate(18%, -28%);
+        width: 72%;
+    }
+    h1 {
+        font-weight: 600;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 35px;
+    }
+    p {
+        max-width: 232px;
+    }
+}
